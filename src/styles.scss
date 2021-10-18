@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+
+
+html,
+body {
+  height: 100%;
+}
+
+
+// .tooltip.bottom .tooltip-arrow {
+//   border-bottom-color: #ddd; 
+// }
+
+.tooltip-inner {
+  //border: 1px solid #ddd;
+  //background-color: #fff;
+  //color : #666;
+  background-color: #009688;
+  //padding: 20px 20px;
+  color: #fff;
+}
+
+.tooltip.top .tooltip-arrow:before,
+.tooltip.top .tooltip-arrow {
+  border-top-color: #009688;
+}
+
+// .tooltip-arrow {
+//   border-bottom-color: white;  
+// }
+
+
+
+// .tooltip.bottom .tooltip-arrow {
+//   border: 1px solid #e0e0e0;
+//   border-bottom: none;
+//   border-right: none;
+//   width: 10px;
+//   height: 10px;
+//   transform: rotate(45deg);
+//   background: white;
+// }
+
+
+.bs-datepicker-head .next {
+  //display: none;
+}
+
+.bs-datepicker-head {
+  //display: none;
+  //height: 200px;
+  //padding: 30px;
+  //border-radius: 3px 3px 0 0;
+}
+
+.bs-datepicker-head button {
+  //height: 30px;
+  //line-height: 30px;
+  color: red;
+  //background-color: aqua;
+}
+
+.bs-datepicker-body {
+  padding: 10px;
+}
+
+.bs-datepicker-container {
+  padding: 0;
+}
+
+.bs-datepicker-body table td.week span 
+{
+  color: #fff !important; 
+}
+
+.bs-datepicker-body table td span.selected,
+.bs-datepicker-head,
+.bs-datepicker-head, .bs-datepicker button:active,
+.bs-datepicker-body table td.selected span,
+.bs-datepicker-body table td span[class*="select-"]:after,
+.bs-datepicker-body table td[class*="select-"] span:after,
+.bs-datepicker-body table td.active-week span:hover 
+{
+  background-color: #fff !important;
+}

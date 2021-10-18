@@ -1,0 +1,57 @@
+
+<div class="modal-header">
+    <h4 class="modal-title pull-left">{{ isNew ? "Nuevo Usuario" : "Actualizar Usuario" }}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+
+<div class="modal-body">
+    
+    <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+
+        <div class="mb-2 col-md-8">
+            <label for="documentId" class="form-label mb-1 small">Documento Identidad</label>
+            <input type="text" class="form-control" id="documentId" autocomplete="off" formControlName="documentId">
+        </div>
+
+        <div class="mb-2 col-md-8">
+            <label for="firstName" class="form-label mb-1 small">Nombre</label>
+            <input type="text" class="form-control" id="firstName" autocomplete="off" formControlName="firstName">
+        </div>
+
+        <div class="mb-2 col-md-8">
+            <label for="lastName" class="form-label mb-1 small">Apellido</label>
+            <input type="text" class="form-control" id="lastName" autocomplete="off" formControlName="lastName">
+        </div>
+
+        <div class="mb-2 col-md-8">
+            <label for="emailAddress" class="form-label mb-1 small">Correo</label>
+            <input type="email" class="form-control" id="emailAddress" formControlName="emailAddress">
+        </div>
+
+        <div class="mb-2 col-md-8">
+            <label for="gender" class="form-label mb-1 small">Genero</label>
+            <select class="form-select" aria-label="Selector genero" id="gender" formControlName="gender">
+                <option selected></option>
+                <option value="Male">Masculino</option>
+                <option value="Female">Femenino</option>
+            </select>
+        </div>
+        
+
+        <div class="mb-2 col-md-8">
+            <label for="phoneNumber" class="form-label mb-1 small">Fono</label>
+            <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+        </div>
+
+        
+
+        <div class="d-flex gap-3 my-3 float-end">
+            <button class="btn btn-primary" type="submit"> {{ isNew ? "Guardar registro" : "Modificar registro" }}</button>
+            
+            <button class="btn btn-outline-secondary" (click)="closeForm($event)">Cancelar</button>
+        </div>
+
+    </form>
+</div>
